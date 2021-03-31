@@ -128,7 +128,7 @@ header {
 
 /* ----- Squad ----- */
 .squad {
-    padding: 120px 0px;
+    padding-top: 120px;
 }
 .squad__title {
     display: flex;
@@ -197,3 +197,307 @@ header {
 
 
 /* ----- Services ----- */
+.services {
+    padding: 120px 0px 130px 0px;
+    background: #FBFBFB;
+}
+.caption {
+    font-size: 48px;
+    line-height: 71px;
+    letter-spacing: 3.07px;
+    color: #252525;
+    font-weight: 700;
+}
+.caption:after {
+    content: '';
+    display: block;
+    width: 45px;
+    height: 2px;
+    margin-top: 5px;
+    background-color: #252525;
+}
+.services__block {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 85px;
+    gap: 30px;
+}
+.services__column {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 50px 35px 35px;
+}
+.services__column--active {
+    border-bottom: 3px solid #70BF73;
+}
+.block__row {
+    display: flex;
+    justify-content: space-between;
+}
+.services__title {
+    font-size: 20px;
+    line-height: 29.64px;
+    letter-spacing: 1.28px;
+    color: #252525;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.services__title:after {
+    content: '';
+    display: block;
+    width: 35px;
+    height: 2px;
+    margin-top: 15px;
+    background-color: #252525;
+}
+.services span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px #DBDBDB;
+}
+.services__column img {
+    width: 25px;
+    height: 25px;
+    opacity: 0.5;
+}
+.services__item {
+    margin: 20px 0px;
+    font-size: 12px;
+    line-height: 25px;
+    letter-spacing: 1.01px;
+    color: #777777;
+    font-family: 'Open Sans', sans-serif;
+}
+.read {
+    font-size: 10px;
+    line-height: 14.82px;
+    letter-spacing: 0.64px;
+    font-weight: 300;
+    color: #252525;
+    opacity: 0.5;
+    text-transform: uppercase;
+    transition: .2s;
+}
+.read:hover {
+    color: #4CAF50;
+    transition: .2s linear;
+    text-decoration: underline;
+}
+.services__column--active img,
+.services__column--active .read {
+    opacity: 1;
+}
+
+
+/* ----- Works ----- */
+.works {
+    padding-top: 210px;
+}
+.works__list {
+    display: flex;
+    margin-top: 50px;
+}
+.works .link {
+    font-size: 13px;
+    line-height: 17.7px;
+    letter-spacing: 0.83px;
+    color: #252525;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    opacity: 0.3;
+    transition: .2s;
+    text-transform: uppercase;
+}
+.works .link:hover {
+    opacity: 1;
+    transition: .2s;
+}
+.works .list__item:not(:last-child) {
+    margin-right: 40px;
+}
+.works .link--active {
+    opacity: 1;
+}
+
+.works__content {
+    display: flex;
+    position: relative;
+}
+.content__photo {
+    display: flex;
+    max-width: 610px;
+}
+.content__photo img {
+    position: relative;
+}
+.optional__title {
+    position: relative;
+    font-size: 48px;
+    line-height: 71px;
+    letter-spacing: 3.07px;
+    color: #252525;
+    font-weight: 300;
+    text-transform: uppercase;
+    z-index: 2;
+}
+.works__content--photography .optional__title {
+    left: 6%;
+    top: 26%;
+}
+.works__content--photography img {
+    right: 22%;
+    bottom: 33%;
+}
+.works__content--kitten .content__photo {
+    max-width: 670px;
+}
+.works__content--kitten .optional__title {
+    right: 13%;
+    top: 10%;
+}
+.works__content--kitten .optional__title:before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    background: #70BF73;
+}
+.works__content--kitten .optional__title span:before {
+    content: '';
+    position: absolute;
+    bottom: 75%;
+    display: inline-block;
+    width: 37%;
+    height: 2px;
+    background: #70BF73;
+}
+.works__content--kitten img {
+    bottom: 50%;
+}
+.content__item {
+    position: relative;
+}
+.works__content--kitten .content__item {
+    margin: 0 auto;
+    bottom: 120px;
+    text-align: right;
+}
+.content__item h5 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 24.51px;
+    letter-spacing: 1.15px;
+    color: #252525;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+}
+.content__item p {
+    margin-bottom: 20px;
+    font-size: 13px;
+    line-height: 23px;
+    letter-spacing: 0.83px;
+    color: #C2C2C2;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.works__content--groovemade {
+    justify-content: space-between;
+}
+.works__content--groovemade .content__photo {
+    max-width: 865px;
+}
+.works__content--groovemade .content__item {
+    max-height: 150px;
+    bottom: 195px;
+    left: 15%;
+}
+.works__content--groovemade .link--active {
+    position: relative;
+}
+.works__content--groovemade .link--active:before {
+    content: '';
+    position: absolute;
+    bottom: 40%;
+    display: inline-block;
+    width: 100%;
+    height: 2px;
+    background: #70BF73;
+    transition: .3s;
+}
+.works__content--groovemade .link--active:hover:before {
+    width: 0;
+    transition: .3s;
+}
+.works__content--groovemade .content__photo {
+    position: relative;
+    bottom: 293px;
+}
+.works__content--groovemade .optional__title {
+    left: 33%;
+    top: 59%;
+}
+
+.works__content--apple .content__photo {
+    position: relative;
+    max-width: 710px;
+    bottom: 377px;
+}
+.works__content--apple .optional__title {
+    top: 60%;
+    right: 12%;
+}
+.works__content--apple .content__item {
+    bottom: 260px;
+    margin: 0 auto;
+    text-align: right;
+}
+
+.works__content--view {
+    justify-content: space-between;
+    bottom: 190px;
+    align-items: center;
+}
+.works__content--view .content__item {
+    left: 15%;
+}
+.works .view {
+    font-size: 13px;
+    line-height: 19.27px;
+    letter-spacing: 2px;
+    color: #252525;
+    transition: .2s linear;
+}
+.works .view:hover {
+    color: #4CAF50;
+    transition: .2s linear;
+    text-decoration: underline;
+}
+
+
+/* ----- Team ----- */
+.team {
+    padding: 130px 0px 165px 0px;
+    background: #FBFBFB;
+}
+.team__caption {
+    margin-bottom: 70px;
+}
+.team__images {
+    position: relative;
+    display: flex;
+    gap: 30px;
+}
+.team__images .info__name {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+}
