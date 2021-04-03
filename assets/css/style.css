@@ -9,6 +9,12 @@
 body {
     font-family: 'Oswald', 'Open Sans', sans-serif;
 }
+button {
+    background: #ffffff;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+}
 .container {
     max-width: 1170px;
     width: 100%;
@@ -28,7 +34,7 @@ header {
 .navigation__list {
     display: flex;
     justify-content: flex-end;
-    padding-top: 80px;
+    padding-top: 60px;
 }
 .navigation__item a {
     font-size: 14px;
@@ -490,14 +496,227 @@ header {
     margin-bottom: 70px;
 }
 .team__images {
-    position: relative;
     display: flex;
     gap: 30px;
 }
-.team__images .info__name {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
+.images {
+    display: flex;
+    flex-direction: column;
+    position: relative;
 }
+.images img {
+    position: relative;
+    display: flex;
+}
+.info__block {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    padding: 15px 0px;
+    background-color:rgba(255, 255, 255, 0.5);
+    transition: .4s linear;
+}
+.info__block .info__name:after {
+    display: none;
+    opacity: 0;
+}
+.info__block p:not(.info__name) {
+    display: none;
+    opacity: 0;
+}
+.info__block:hover {
+    padding: 20px 0px 30px 0px;
+    background-color:rgba(255, 255, 255, 0.93);
+    transition: .4s linear;
+}
+.info__block p {
+    transition: .4s linear;
+    opacity: 1;
+}
+.info__block:hover p,
+.info__block:hover .info__name:after {
+    display: block;
+    transition: .4s linear;
+    opacity: 1;
+}
+.info__name,
+.info__post {
+    margin-bottom: 6px;
+    font-size: 18px;
+    line-height: 26.68px;
+    letter-spacing: 1.15px;
+    font-weight: 300;
+    color: #252525;
+    text-transform: uppercase;
+}
+.info__name:after {
+    content: '';
+    display: block;
+    width: 45px;
+    height: 2px;
+    margin: 10px auto 0px;
+    background-color: #252525;
+}
+.info__post {
+    margin-bottom: 12px;
+    text-transform: none;
+}
+.info__creator {
+    font-size: 12px;
+    line-height: 25px;
+    letter-spacing: 1.01px;
+    color: #777777;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/* ----- Testimonials ----- */
+.testimonial {
+    padding: 115px 0px 145px 0px;
+}
+.testimonial__slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.testimonial__quote {
+    max-width: 735px;
+    font-size: 14px;
+    line-height: 31px;
+    letter-spacing: 0.9px;
+    color: #373737;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+}
+.testimonial__quote:after {
+    content: '';
+    display: block;
+    background: url(../img/hand-drown.png) no-repeat;
+    width: 20px;
+    height: 20px;
+    margin: 30px auto;
+}
+.testimonial__autor span {
+    font-size: 18px;
+    line-height: 26.68px;
+    letter-spacing: 1.15px;
+    color: rgb(55, 55, 55, 1);
+}
+.testimonial__autor {
+    margin-bottom: 25px;
+    font-size: 12px;
+    line-height: 14.06px;
+    letter-spacing: 0.9px;
+    color: rgb(55, 55, 55, .3);
+}
+.slide__arrow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.testimonial button:not(:last-child) {
+    margin-right: 10px;
+}
+.line {
+    display: flex;
+    width: 510px;
+    height: 1px;
+    margin: 10px auto 0px;
+    background: #D8D8D8;
+    opacity: 0.5;
+}
+
+
+/* ----- Contact ----- */
+.contact__container {
+    display: flex;
+}
+.section {
+    width: 50%;
+    padding: 70px 0px 100px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.section img {
+    margin-bottom: 20px;
+}
+.section h3 {
+    margin-bottom: 22px;
+    font-size: 24px;
+    line-height: 35.57px;
+    letter-spacing: 2.67px;
+}
+.section-work__together {
+    color: #373737;
+}
+.section-contact__us {
+    background: #70BD59;
+    color: #ffffff;
+}
+.section p {
+    font-size: 14px;
+    line-height: 19.07px;
+    letter-spacing: 1.56px;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    opacity: 0.8;
+}
+
+
+/* ----- Footer ----- */
+footer {
+    text-align: center;
+    background-color: #2E2E2E;
+}
+.footer__top {
+    padding: 80px 0px;
+}
+.footer__logo {
+    margin-bottom: 30px;
+    font-size: 30px;
+    line-height: 1;
+    letter-spacing: 3.07px;
+    color: rgb(255, 255, 255, .8);
+}
+footer a,
+footer p {
+    display: inline-block;
+    font-size: 13px;
+    line-height: 19.27px;
+    letter-spacing: 0.83px;
+    font-weight: 300;
+    color: rgb(255, 255, 255, .5);
+}
+.footer__adress {
+    margin-bottom: 10px;
+}
+.footer__mail {
+    margin-bottom: 40px;
+}
+.footer__icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.footer__icons img {
+    opacity: 0.5;
+    transition: .3s;
+}
+.footer__icons img:hover {
+    opacity: 1;
+    transition: .3s;
+}
+.copyright {
+    width: 100%;
+    padding: 20px 0px;
+    background: #252525;
 }
